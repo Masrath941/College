@@ -44,7 +44,7 @@ class OrderItem(models.Model):
     date_added = models.DateTimeField(auto_now_add = True)
 
     def __str__(self):
-        return self.product
+        return self.product.name
 
 class ShippingAddress(models.Model):
      customer = models.ForeignKey(Customer, on_delete = models.SET_NULL, null = True, blank = True)
