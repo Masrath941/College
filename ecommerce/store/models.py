@@ -22,9 +22,9 @@ class Product(models.Model):
     @property
     def imageURL(self):
         try :
-            image.url = self.image.url 
+            url = self.image.url
         except :
-            image.url = " "
+            url = " "
         return url
 
 class Order(models.Model):
